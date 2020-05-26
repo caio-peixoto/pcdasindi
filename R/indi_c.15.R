@@ -13,8 +13,8 @@
 #' c.15 <- indi_c.15(conn, 2010)
 
 indi_c.15 <- function(conn, ano, agr, multi = 1000){
-
-  sim <- get_sim(conn = conn, ano = ano, agr = agr, idade_obito_anos_min = 0, idade_obito_anos_max = 1, causabas_capitulo = paste0("XVI. Algumas afec originadas no período perinatal"))
+texto_causabas_capitulo <-  paste0("XVI. Algumas afec originadas no período perinatal")
+  sim <- get_sim(conn = conn, ano = ano, agr = agr, idade_obito_anos_min = 0, idade_obito_anos_max = 1, causabas_capitulo = texto_causabas_capitulo)
   sinasc <- get_sinasc(conn = conn, ano = ano, agr = agr)
 
   join_names <- join_names(agr = agr)
